@@ -1,15 +1,72 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Я тебя люблю, Гномя</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <img src="img/png-transparent-drawing-cartoon-love-heart-heart-love-heart-cartoon.png" alt="Heart" class="heart">
-        <h1>Я тебя люблю, Гномя!</h1>
-    </div>
-</body>
-</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;  /* Чтобы избежать появления полос прокрутки */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heart {
+    width: 300px;  /* Устанавливаем желаемую ширину */
+    height: auto;   /* Высота будет пропорциональна ширине */
+    animation: heartAnimation 1.5s ease-in-out infinite;
+    margin-bottom: 20px;  /* Отступ снизу */
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    animation: textAnimation 2s ease-in-out infinite;
+}
+
+@keyframes heartAnimation {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        color: #333;
+    }
+    50% {
+        color: #ff4c4c;
+    }
+    100% {
+        color: #333;
+    }
+}
+
+@media (max-width: 768px) {
+    .heart {
+        width: 200px;  /* Уменьшаем картинку на мобильных устройствах */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
