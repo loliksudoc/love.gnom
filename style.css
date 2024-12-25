@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart {
+    width: 40vmin;  /* Устанавливаем размер относительно ширины экрана */
+    height: 40vmin;
+    background-color: red;
+    clip-path: polygon(50% 0%, 0% 40%, 50% 100%, 100% 40%);
+    animation: heartAnimation 1.5s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-top: 20px;
+    animation: textAnimation 2s ease-in-out infinite;
+}
+
+@keyframes heartAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        color: #333;
+    }
+    50% {
+        color: #ff4c4c;
+    }
+    100% {
+        color: #333;
+    }
+}
+
+@media (max-width: 768px) {
+    .heart {
+        width: 50vmin;
+        height: 50vmin;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
