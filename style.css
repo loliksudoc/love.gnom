@@ -15,7 +15,7 @@ body {
     text-align: center;
 }
 
-.container {
+.heart-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -26,9 +26,9 @@ body {
 .heart {
     width: 200px;
     height: 200px;
+    background-color: red;
     position: relative;
     transform: rotate(45deg);
-    background-color: red;
     animation: heartAnimation 1.5s ease-in-out infinite;
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #333;
     margin-top: 20px;
     animation: textAnimation 2s ease-in-out infinite;
@@ -88,6 +88,6 @@ h1 {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
