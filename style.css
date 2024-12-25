@@ -27,18 +27,18 @@ body {
     width: 200px;
     height: 200px;
     position: relative;
-    background-color: red;
     transform: rotate(45deg);
+    background-color: red;
     animation: heartAnimation 1.5s ease-in-out infinite;
 }
 
 .heart::before,
 .heart::after {
     content: '';
+    position: absolute;
     width: 200px;
     height: 200px;
     background-color: red;
-    position: absolute;
     border-radius: 50%;
 }
 
