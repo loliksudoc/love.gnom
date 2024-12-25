@@ -39,4 +39,55 @@ body {
     height: 200px;
     background-color: red;
     position: absolute;
-    border-ra
+    border-radius: 50%;
+}
+
+.heart::before {
+    left: 100px;
+}
+
+.heart::after {
+    top: 100px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-top: 20px;
+    animation: textAnimation 2s ease-in-out infinite;
+}
+
+@keyframes heartAnimation {
+    0% {
+        transform: scale(1) rotate(45deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(45deg);
+    }
+    100% {
+        transform: scale(1) rotate(45deg);
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        color: #333;
+    }
+    50% {
+        color: #ff4c4c;
+    }
+    100% {
+        color: #333;
+    }
+}
+
+@media (max-width: 768px) {
+    .heart {
+        width: 250px;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
